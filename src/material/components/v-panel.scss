@@ -1,0 +1,70 @@
+@mixin valo-panel-caption-style($background-color: $v-background-color, $bevel: $v-bevel, $gradient: null, $border: null) {
+  @include box-sizing(border-box);
+  padding: $mat-card-padding 0 0 $mat-card-padding;
+  line-height: $v-unit-size;
+  $bg: $mat-card-color;
+  color: valo-font-color($bg);
+  font-size: $mat-card-caption-font-size;
+  font-weight: $mat-card-caption-font-weight;
+  @include box-shadow(valo-bevel-and-shadow($background-color: $bg, $bevel: null, $shadow: null, $gradient: null));
+  text-shadow: valo-text-shadow(valo-font-color($bg), $bg);
+}
+
+@mixin valo-panel($include-additional-styles,$primary-stylename: v-panel) {
+  .#{$primary-stylename} {
+    @include valo-panel-style;
+    overflow: visible !important;
+  }
+  .#{$primary-stylename}-caption {
+    @include valo-panel-caption-style;
+    border-radius: $v-border-radius - first-number($v-border) $v-border-radius - first-number($v-border) 0 0;
+  }
+  .#{$primary-stylename}-content {
+    @include box-sizing(border-box);
+    width: 100%;
+    height: 100%;
+    @include valo-panel-adjust-content-margins;
+  }
+  @if $include-additional-styles {
+    .#{$primary-stylename}-borderless {
+      @include valo-panel-borderless-style;
+    }
+
+    .#{$primary-stylename}-well {
+      @include valo-panel-well-style;
+    }
+
+    .#{$primary-stylename}-scroll-divider {
+      @include valo-panel-scroll-divider-style;
+    }
+
+    .#{$primary-stylename}-caption.v-horizontallayout {
+      height: auto !important;
+      line-height: 0;
+
+      .v-slot {
+        vertical-align: middle;
+      }
+
+      .v-label {
+        line-height: $v-unit-size;
+      }
+    }
+  }
+  .v-panel-content > .v-margin-left, .v-csslayout-card > .v-margin-left {
+    padding-left: $mat-card-padding;
+  }
+  .v-panel-content > .v-margin-bottom, .v-csslayout-card > .v-margin-bottom {
+    padding-bottom: $mat-card-padding;
+  }
+  .v-panel-content > .v-margin-right, .v-csslayout-card > .v-margin-right {
+    padding-right: $mat-card-padding;
+  }
+  .v-panel-content > .v-margin-top, .v-csslayout-card > .v-margin-top {
+    padding-top: $mat-card-padding;
+  }
+  .v-panel-well,
+  .v-csslayout-well {
+    background: darken($mat-background-color, 1%);
+  }
+}
