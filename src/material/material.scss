@@ -9,6 +9,7 @@ $v-included-components: remove($v-included-components, panel);
 @import "components/v-window.scss";
 @import "components/v-panel.scss";
 @import "ripple/ripple.scss";
+
 @import "components/v-button.scss";
 @import "components/v-textfield.scss";
 @import "components/v-filterselect.scss";
@@ -34,6 +35,12 @@ $v-included-components: remove($v-included-components, panel);
 @import "components/v-colorpicker.scss";
 @import "components/v-menu.scss";
 @import "components/v-app-loading.scss";
+@import "components/contextmenu.scss";
+@import "components/sidemenu.scss";
+@import "components/log-control.scss";
+@import "components/table-paging.scss";
+@import "components/breadcrumbs.scss";
+@import "fonts/_fonts.scss";
 @import "scrollbar.scss";
 
 @import "cards.scss";
@@ -70,4 +77,11 @@ $v-included-components: remove($v-included-components, panel);
   @include v-app-loading;
 
   @include valo-panel($include-additional-styles: true);
+
+  @include halo-cuba-contextmenu;
+  @include halo-cuba-sidemenu($primary-stylename: c-sidemenu);
+  @include cuba-log-control;
+  @include valo-fonts;
+  @include cuba-table-paging;
+  @include cuba-breadcrumbs;
 }
