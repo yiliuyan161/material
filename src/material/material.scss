@@ -40,7 +40,6 @@ $v-included-components: remove($v-included-components, panel);
 @import "components/log-control.scss";
 @import "components/table-paging.scss";
 @import "components/breadcrumbs.scss";
-@import "fonts/_fonts.scss";
 @import "scrollbar.scss";
 
 @import "cards.scss";
@@ -81,7 +80,6 @@ $v-included-components: remove($v-included-components, panel);
   @include halo-cuba-contextmenu;
   @include halo-cuba-sidemenu($primary-stylename: c-sidemenu);
   @include cuba-log-control;
-  @include valo-fonts;
   @include cuba-table-paging;
   @include cuba-breadcrumbs;
 }
