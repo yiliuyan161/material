@@ -14,10 +14,10 @@
   .v-tabsheet-framed > .v-tabsheet-tabcontainer .v-tabsheet-caption-close {
     top: 0px;
     right: 4px;
-    margin-top: 11px;
+    //margin-top: 11px;
   }
   .v-tabsheet-framed > .v-tabsheet-content > div {
-    box-shadow: $z-depth-1;
+    box-shadow: $z-depth-2;
   }
   .v-tabsheet-framed .v-tabsheet-content {
     position: relative;
@@ -83,6 +83,12 @@
   }
   .v-tabsheet:not(.v-tabsheet-framed) > .v-tabsheet-tabcontainer .v-tabsheet-tabitem {
     position: relative;
+  }
+  .v-tabsheet-tabitemcell .v-caption{
+    background-color: mix($mat-background-color, $mat-card-color);
+  }
+  .v-tabsheet-tabitemcell .v-tabsheet-tabitem-selected .v-caption.v-caption{
+    background-color: $mat-card-color;
   }
 
 }

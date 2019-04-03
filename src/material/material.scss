@@ -1,6 +1,7 @@
 @import "variables.scss";
-//@import "../valo/valo.scss";
+@import "../valo/valo.scss";
 @import "../halo/halo";
+
 $v-included-components: remove($v-included-components, button);
 $v-included-components: remove($v-included-components, panel);
 
@@ -9,7 +10,6 @@ $v-included-components: remove($v-included-components, panel);
 @import "components/v-window.scss";
 @import "components/v-panel.scss";
 @import "ripple/ripple.scss";
-
 @import "components/v-button.scss";
 @import "components/v-textfield.scss";
 @import "components/v-filterselect.scss";
@@ -35,11 +35,10 @@ $v-included-components: remove($v-included-components, panel);
 @import "components/v-colorpicker.scss";
 @import "components/v-menu.scss";
 @import "components/v-app-loading.scss";
+@import "components/breadcrumbs.scss";
 @import "components/contextmenu.scss";
 @import "components/sidemenu.scss";
-@import "components/log-control.scss";
 @import "components/table-paging.scss";
-@import "components/breadcrumbs.scss";
 @import "scrollbar.scss";
 
 @import "cards.scss";
@@ -48,7 +47,9 @@ $v-included-components: remove($v-included-components, panel);
   @include functions;
   @include globals;
   @include cards;
-  @include ripple;
+  @if ($mat-ripple-enabled) {
+    @include ripple;
+  }
   @include v-button;
   @include v-textfield;
   @include v-filterselect;
@@ -74,12 +75,10 @@ $v-included-components: remove($v-included-components, panel);
   @include v-colorpicker;
   @include v-menu;
   @include v-app-loading;
-
-  @include valo-panel($include-additional-styles: true);
-
-  @include halo-cuba-contextmenu;
-  @include halo-cuba-sidemenu($primary-stylename: c-sidemenu);
-  @include cuba-log-control;
-  @include cuba-table-paging;
   @include cuba-breadcrumbs;
+  @include halo-cuba-contextmenu;
+  @include cuba-log-control;
+  @include halo-cuba-sidemenu;
+  @include cuba-table-paging;
+  .c-app-menubar{ margin-bottom: 2px;}
 }

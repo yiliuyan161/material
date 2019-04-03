@@ -27,7 +27,7 @@
     &.system:not(.dark):not(.success):not(.failure) .v-Notification-caption,
     &.system:not(.dark):not(.success):not(.failure) .v-Notification-description {
       color: valo-font-color($mat-window-color, 1.0) !important;
-      background: $mat-window-color;
+      //background: $mat-window-color;
     }
     &.success, &.success .v-Notification-caption {
       background: $v-friendly-color;

@@ -1,7 +1,6 @@
 @mixin v-menubar {
   // Default Menubar
   .v-menubar:not(.primary):not(.borderless):not(.custom):not(.v-menubar-user-menu) {
-    background: $mat-card-color;
     color: valo-font-color($mat-card-color, 1.0) !important;
   }
   .v-menubar-borderless:not(.primary):not(.custom) .v-menubar-menuitem {
@@ -20,7 +19,6 @@
   }
   // Primary Menubar
   .v-menubar.primary:not(.borderless) {
-    background: $v-selection-color;
     color: valo-font-color($v-selection-color, 1.0) !important;
   }
   .v-menubar-borderless.primary .v-menubar-menuitem {
@@ -112,5 +110,10 @@
   .v-menubar-popup .v-menubar-menuitem-disabled {
     opacity: 1.0;
     color: valo-font-color(valo-font-color($mat-background-color, 1), 0.5);
+  }
+  .c-inverse-header.c-app-menubar {
+    background-color:#0D47A1;
+    box-shadow: $z-depth-1 !important;
+    text-transform: uppercase;
   }
 }
