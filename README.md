@@ -1,4 +1,10 @@
 ## cuba-platform material theme
+
+migrate from  appreciated/material
+
+<div class="github-card" data-user="appreciated" data-repo="material"></div>
+<script src="https://cdn.jsdelivr.net/gh/lepture/github-cards@latest/jsdelivr/widget.js"></script>
+
 ### How to install
 
 #### modify *build.gradle*
