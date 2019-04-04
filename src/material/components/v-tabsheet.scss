@@ -46,7 +46,7 @@
   }
   .v-tabsheet-framed .v-tabsheet-tabitemcell .v-tabsheet-tabitem {
     overflow: visible !important;
-    box-shadow: $z-depth-1;
+    box-shadow: 0 1px 1px 1px rgba(0,0,0,0.14), 1px 1px 1px 1px rgba(0,0,0,0.12), 1px 1px 1px 1px rgba(0,0,0,0.2);
     position: relative;
   }
   .v-tabsheet-framed > .v-tabsheet-tabcontainer .v-caption {

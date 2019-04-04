@@ -80,5 +80,5 @@ $v-included-components: remove($v-included-components, panel);
   @include cuba-log-control;
   @include halo-cuba-sidemenu;
   @include cuba-table-paging;
-  .c-app-menubar{ margin-bottom: 2px;}
+  .c-app-menubar{ margin-bottom: 1px;}
 }

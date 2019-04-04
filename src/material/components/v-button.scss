@@ -99,6 +99,7 @@ body:not(.v-touch) .v-button:not(.v-disabled).borderless.custom:hover {
     outline: none;
     text-align: center;
     color: $mat-card-font-color;
+    border-radius: 2px;
   }
   :not(.v-upload) > * > .v-button:not(.v-disabled) {
     @extend .z-depth-0;

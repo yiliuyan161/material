@@ -91,4 +91,7 @@
   .v-datefield [class*="button"]:active:after {
     background-color: rgba(0, 0, 0, 0.0);
   }
+  .v-datefield {
+    width: $mat-datefield-width !important;
+  }
 }

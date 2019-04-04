@@ -22,7 +22,7 @@
     color: valo-font-color($v-selection-color, 1.0) !important;
   }
   .v-menubar-borderless.primary .v-menubar-menuitem {
-    color: $v-focus-color !important;
+    color: $mat-card-color !important;
   }
   .v-menubar.primary > .v-menubar-menuitem:not(.v-menubar-menuitem-disabled):hover,
   .v-menubar.primary > .v-menubar-menuitem-selected,
@@ -112,8 +112,11 @@
     color: valo-font-color(valo-font-color($mat-background-color, 1), 0.5);
   }
   .c-inverse-header.c-app-menubar {
-    background-color:#0D47A1;
-    box-shadow: $z-depth-1 !important;
+    background-color:$mat-inverse-header;
+    box-shadow:0 2px 4px rgba(0,0,0,.5);
     text-transform: uppercase;
+  }
+  .c-inverse-header .c-main-menu.v-menubar>.v-menubar-menuitem>.v-menubar-menuitem-caption,.c-inverse-header .c-userindicator{
+    color:$mat-card-color!important;
   }
 }

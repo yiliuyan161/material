@@ -1,8 +1,8 @@
 // required for material theme
-$v-focus-color: #64B5F6 !default;
+$v-focus-color: #448AFF !default;
 
 // material variables
-$mat-background-color: #E3F2FD !default;
+$mat-background-color: #ECEFF1 !default;
 $mat-card-color: lighten($mat-background-color, 30%) !default;
 $mat-window-color: lighten($mat-card-color, 30%) !default;
 $mat-card-font-color: valo-font-color($mat-card-color, 1.0) !default;
@@ -19,13 +19,15 @@ $mat-ripple-enabled: true !default;
 $mat-switch-shadow: $z-depth-1 !default;
 $mat-switch-shadow-disabled: $z-depth-1 !default;
 $v-button-round-border-radius: 30px !default;
+$mat-datefield-width:140px !default;
+$mat-inverse-header:#1565C0 !default;
 
 // valo
 $v-font-size: 14px !default;
 $v-font-family: sans-serif !default;
 $v-font-weight: 400 !default;
-$v-unit-size: 45px !default;
-$v-unit-size-2: 42px !default;
+$v-unit-size: 43px !default;
+$v-unit-size-2: 40px !default;
 $v-error-indicator-color: #d32f2f !default;
 $v-friendly-color: #4caf50 !default;
 $v-app-background-color: $mat-background-color !default;
